@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+---
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/hlottery
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: admin12!
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format-sql: true
+        show-sql: true
+  h2:
+    console:
+      enabled: true
+
+    
+logging:
+  level:
+    '[com.hanwha]': DEBUG
+     
+  
+
+jwt:
+  header: Authorization
+  secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
+  token-validity-in-seconds: 86400
+
+
